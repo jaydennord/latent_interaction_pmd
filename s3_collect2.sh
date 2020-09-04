@@ -6,8 +6,6 @@
 #SBATCH --job-name=col
 #SBATCH --error=./slurm/job_%J.err
 #SBATCH --output=./slurm/job_%J.out
-#SBATCH --mail-type=ALL
-#SBATCH --mail-user=jaydennord@gmail.com
 
 module load R
 Rscript 3-collect.R $SLURM_ARRAY_TASK_ID
